@@ -11,12 +11,16 @@
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
     --font-family: 'Red Hat Display', sans-serif;
-    --font-size: 1rem;
+    --font-size: 1em;
     --mobile: 375px;
     --desktop: 1440px;
 }
 
-@media only screen and (max-width: 375px) {
+h1 {
+    font-size: 2em;
+  }
+
+@media only screen and (max-width: 1440px) {
     body {
         min-width: 75%;
         background-image: url(./images/pattern-background-mobile.svg);
@@ -37,6 +41,7 @@ html, body {
     font-family: var(--font-family);
     font-size: var(--font-size);
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -65,6 +70,8 @@ main div {
 }
 
 main.box {
+    max-width: 30%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,6 +82,13 @@ main.box {
     box-shadow: 0 4px 30px -20px gray;
 }
 
+@media only screen and (max-width: 1440px) {
+    main.box {
+        max-width: 90%;
+    }
+}
+
+
 .item-1 {
     width: 100%;
 }
@@ -82,7 +96,7 @@ main.box {
 .item-3,
 .item-4,
 .item-5 {
-    width: 80%;
+    width: 75%;
     margin: 10px;
 }
 
@@ -104,19 +118,26 @@ main.box {
 
 .item-2 p, 
 .item-2 h1{
-    margin: 10px;
+    margin: 0.625rem;
 }
 
 .item-3 {
     justify-content: space-between;
     align-items: center;
     background-color: var(--very-pale-blue);
-    padding: 10px;
-    border-radius: 10px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
 }
 
 .item-3 div {
     margin: 10px;
+}
+
+@media only screen and (max-width: 1440px) {
+
+    .item-3 div {
+        margin: 5px;
+    }
 }
 
 .item-3 h3{
@@ -152,6 +173,7 @@ color: #766CF1
 
 .item-4 button h3{
     color: white;
+    font-size: 1.25em;
     font-family: var(--font-family);
 }
 
